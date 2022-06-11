@@ -1,5 +1,4 @@
 // dont move top/left while dragging an element
-// dont mess with bounding client rect
 class FidgetViewport extends HTMLDivElement {
 	constructor() {
 		super();
@@ -9,7 +8,7 @@ class FidgetViewport extends HTMLDivElement {
 		this.updatePosition();
 	}
 	updatePosition() {
-		this.style.transform = `translate(${this.scrollX}px, ${this.scrollY}px) scale(${this.scale})`; // TODO not working on children
+		//this.style.transform = `translate(${this.scrollX}px, ${this.scrollY}px) scale(${this.scale})`; // TODO not working on children
 	}
 };
 class FidgetDraggable extends HTMLDivElement { // TODO z indexing
